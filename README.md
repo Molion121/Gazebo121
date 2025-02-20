@@ -24,6 +24,10 @@
     
   运动插件复制，将动态库文件libgazebo_ros_wheeltec_mec.so置于/opt/ros/melodic/lib下  
   sudo cp ./gazebo_configuration/libgazebo_ros_wheeltec_mec.so /opt/ros/melodic/lib/libgazebo_ros_wheeltec_mec.so  
+
+  gazebo material里面包含材料颜色纹理等设置，可同步替换：  
+  sudo cp ./gazebo_configuration/gazebo.material /usr/share/gazebo-9/media/materials/scripts/gazebo.material  
+
     
   cartographyer部分：  
   将demo_revo_lds.launch替换于/opt/ros/melodic/share/cartographer_ros/launch下  
