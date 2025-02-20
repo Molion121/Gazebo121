@@ -8,13 +8,15 @@
   环境：  
   ROS1 melodic  
   Ubuntu 18.04  
-  Gazebo>9.0.0  
+  Gazebo 9.0.0  
 
   运动插件生成
   cd 
   
 ## 文件描述
-  wheeltec_description文件夹中
+  wheeltec_description文件夹中为模型urdf以及gazebo world地图等文件，其中meshes的stl文件是使用SolidWorks导出，默认导出urdf过长，实际采用xacro进行简写复用。  
+  wheeltec_gazebo_control文件夹为模型的运动控制插件部分  
+  wheeltec_gazebo_function文件夹中为模型的建图导航、保存地图部分
 
 ## 运行效果图
 键盘控制进行建图：  
