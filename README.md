@@ -10,8 +10,13 @@
   Ubuntu 18.04  
   Gazebo 9.0.0  
 
-  运动插件生成
-  cd 
+  环境配置：  
+  gmapping建图算法：  
+  sudo apt-get install ros-melodic-gmapping  
+  navigation：  
+  sudo apt-get install ros-melodic-navigation  
+  运动插件复制，将动态库文件libgazebo_ros_wheeltec_mec.so置于/opt/ros/melodic/lib下  
+  sudo cp ./libgazebo_ros_wheeltec_mec.so /opt/ros/melodic/lib/libgazebo_ros_wheeltec_mec.so
   
 ## 文件描述
   wheeltec_description文件夹中为模型urdf以及gazebo world地图等文件，其中meshes的stl文件是使用SolidWorks导出，默认导出urdf过长，实际采用xacro进行简写复用。  
