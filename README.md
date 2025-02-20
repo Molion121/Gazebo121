@@ -15,3 +15,14 @@
   
 ## 文件描述
   wheeltec_description文件夹中
+
+## 功能运行
+1、Gazebo 2D建图  
+roslaunch wheeltec_gazebo_function mapping.launch  
+2、键盘控制  
+roslaunch wheeltec_gazebo_function keyboard_teleop.launch  
+3、保存地图  
+一键保存地图(WHEELTEC.pgm、WHEELTEC.yaml)  
+roslaunch wheeltec_gazebo_function map_saver.launch  
+4、Gazebo 2D导航  
+roslaunch wheeltec_gazebo_function navigation.launch  
