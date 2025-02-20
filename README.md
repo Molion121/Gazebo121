@@ -15,10 +15,19 @@
   sudo apt-get install ros-melodic-gmapping  
   navigation：  
   sudo apt-get install ros-melodic-navigation  
+  控制器相关依赖：  
+  sudo apt-get install ros-melodic-ros-control  
+  sudo apt-get install ros-melodic-ros-controllers  
+  sudo apt-get install ros-melodic-ackermann-*  
   运动插件复制，将动态库文件libgazebo_ros_wheeltec_mec.so置于/opt/ros/melodic/lib下  
-  sudo cp ./libgazebo_ros_wheeltec_mec.so /opt/ros/melodic/lib/libgazebo_ros_wheeltec_mec.so
-  
-## 文件描述
+  sudo cp ./gazebo_configuration/libgazebo_ros_wheeltec_mec.so /opt/ros/melodic/lib/libgazebo_ros_wheeltec_mec.so  
+  cartographyer部分：  
+  将demo_revo_lds.launch替换于/opt/ros/melodic/share/cartographer_ros/launch下  
+  sudo cp ./gazebo_configuration/demo_revo_lds.launch /opt/ros/melodic/share/cartographer_ros/launch/demo_revo_lds.launch  
+  将revo_lds_gazebo.lua置于/opt/ros/melodic/share/cartographer_ros/configuration_files下  
+  sudo cp ./gazebo_configuration/revo_lds_gazebo.lua /opt/ros/melodic/share/cartographer_ros/configuration_files/revo_lds_gazebo.lua  
+## 文件描述  
+  gazebo_configuration文件夹中为动态库等配置文件  
   wheeltec_description文件夹中为模型urdf以及gazebo world地图等文件，其中meshes的stl文件是使用SolidWorks导出，默认导出urdf过长，实际采用xacro进行简写复用。  
   wheeltec_gazebo_control文件夹为模型的运动控制插件部分  
   wheeltec_gazebo_function文件夹中为模型的建图导航、保存地图部分
